@@ -1,4 +1,4 @@
-
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -10,27 +10,26 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Estilo para a navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1px 30px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo img {
-    max-height: 50px;
+    padding: 6px;
+    height: 75px;
+    width: 160px;
 }
 
 .menu ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
 }
 
 .menu ul li a {
@@ -43,31 +42,33 @@ body {
     transition: all 0.3s ease;
 }
 
-.menu ul li a:hover,
-.menu ul li a:focus {
-    background-color: #007bff;
-    color: #fff;
-}
-
+/* Estilo ativo */
 .menu ul li a.active {
     border: 2px solid #007bff;
     border-radius: 5px;
-    color: #007bff;
     padding: 0.5rem 1rem;
 }
+.menu-div ul li a.active {
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+.menu-div li a:hover,
+.menu-div li a:focus {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto em branco */
+}
 
-
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    user-select: none;
+/* Hover para os links em geral */
+.menu ul li a:hover,
+.menu ul li a:focus {
+    color: #007bff; /* Cor do texto ao passar o cursor */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .menu {
-        display: none; 
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -92,21 +93,13 @@ body {
         text-align: center;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu.open {
-        display: flex; /* Mostra o menu quando "aberto" */
-        flex-direction: column;
-    }
     .logo img {
-        max-height: 40px; 
+        max-height: 40px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        max-height: 30px; 
+        max-height: 30px;
     }
 }

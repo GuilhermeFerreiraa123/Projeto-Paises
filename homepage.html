@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/styles.css">
-=======
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .active
+
+        .nav-link
+        {
+            margin: 0 15px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-link:hover
+        {
+            color: #007bff;
+        }
+        .btn-outline-success
         {
             border-radius: 0px;
+            border-color: #007bff;
+            color: #007bff;
+        }
+        .btn-outline-success:hover
+        {
+            background-color: #007bff;
+            color: #fff;
+            --bs-btn-hover-border-color:#007bff;        
+        }
+        .navbar-expand-lg
+        {
+            box-shadow: 0 0px 0px;
         }
     </style>
->>>>>>> 5d7eeaa6ffb9d9c3558f9849389ec6008781ee4a
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="img/logo.png">
+            <img src="img/logo.png" alt="Logo">
         </div>
-        <nav class="menu">
-            <ul>
-<<<<<<< HEAD
-                <li><a href="#">Home</a></li>
-=======
-                <li><a href="#s">Casa</a></li>
->>>>>>> 5d7eeaa6ffb9d9c3558f9849389ec6008781ee4a
-                <li><a href="#">Países</a></li>
-                <li><a href="#">Loja</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#" class="active">Contactos</a></li>
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Países</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
+                </li>
             </ul>
-        </nav>
+        </div>
     </header>
+
+
 </body>
+
 </html>
