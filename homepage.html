@@ -5,65 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
-        .nav-link
-        {
+        .nav-link {
             margin: 0 15px;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
-        .nav-link:hover
-        {
-            color: #007bff;
+
+        .nav-link:hover {
+            color: #0f549e;
         }
-        .btn-outline-success
-        {
+
+        .btn-outline-success {
             border-radius: 0px;
-            border-color: #007bff;
-            color: #007bff;
+            border-color: #0f549e;
+            color: #0f549e;
         }
-        .btn-outline-success:hover
-        {
-            background-color: #007bff;
+
+        .btn-outline-success:hover {
+            background-color: #0f549e;
             color: #fff;
-            --bs-btn-hover-border-color:#007bff;        
+            --bs-btn-hover-border-color: #0f549e;
         }
-        .navbar-expand-lg
-        {
-            box-shadow: 0 0px 0px;
+
+        .navbar-light {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .footer-brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .container ul li {
+            color: black;
+        }
+
+        .border-under {
+            border-bottom: 2px solid #ddd;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+        .icon{
+            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo">
-        </div>
-        <div class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Paisespage.html">Países</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Loja</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
-                </li>
-            </ul>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Paisespage.html">Países</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
-
+    <div class="container">
+        <footer class="py-3 my-4">
+            <a class="footer-brand" href="#">
+                <img src="img/logo.png" alt="Logo" height="60">
+            </a>
+            <ul class="nav justify-content-center pb-1">
+                <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Sobre</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
+                
+            </ul>
+            <ul class="nav justify-content-center pb-3 mb-3 border-under">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
+                </li>                
+            </ul>
+            <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+        </footer>
+    </div>
 
 </body>
 

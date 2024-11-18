@@ -1,12 +1,12 @@
 /* Reset de estilos básicos */
 * {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -44,25 +44,25 @@ body {
 
 /* Estilo ativo */
 .menu ul li a.active {
-    border: 2px solid #007bff;
+    border: 2px solid #0f549e;
     border-radius: 5px;
     padding: 0.5rem 1rem;
 }
 .menu-div ul li a.active {
-    border: 2px solid #007bff;
+    border: 2px solid #0f549e;
     border-radius: 5px;
     padding: 0.5rem 1rem;
 }
 .menu-div li a:hover,
 .menu-div li a:focus {
-    background-color: #007bff; /* Cor de fundo azul */
+    background-color: #0f549e; /* Cor de fundo azul */
     color: #fff; /* Cor do texto em branco */
 }
 
 /* Hover para os links em geral */
 .menu ul li a:hover,
 .menu ul li a:focus {
-    color: #007bff; /* Cor do texto ao passar o cursor */
+    color: #0f549e; /* Cor do texto ao passar o cursor */
 }
 
 /* Responsividade */
