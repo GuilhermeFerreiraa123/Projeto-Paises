@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="bootstrap.min.css">
   <title>Lista de Países</title>
@@ -49,21 +48,6 @@
 
     .w-100 {
       height: 100%;
-=======
-  <title>Países da Europa</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
- .col-12{
-    padding-bottom: 2%;
-    cursor: pointer;
- }
-  .card-img-top{
-    width: 100%; 
-    height: 90%; 
-    object-fit: cover; 
-    max-height: 200px; 
->>>>>>> Stashed changes
     }
   </style>
 </head>
@@ -82,81 +66,47 @@
     </nav>
 </header>
 <body>
-<<<<<<< Updated upstream
-  <header class="navbar">
-    <div class="logo">
-      <img src="img/logo.png" alt="Logo">
-    </div>
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="homepage.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Paisespage.html">Países</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Loja</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <h1>Lista de Países</h1>
-  <ul id="countries-list">
-    <!-- Os países serão listados aqui -->
-  </ul>
-  <title>Países da Europa</title>
-=======
-    
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+  <div class="container mt-5">
+    <!-- Container onde os países serão renderizados -->
+    <div id="countries-list" class="row"></div>
 
->>>>>>> Stashed changes
-  <div class="container mt-4">
-    <h1>Países da Europa</h1>
-    <div id="countries-list" class="row">
-    </div>
-  </div>
-  <script>
-    fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(countries => {
-        const countriesListDiv = document.getElementById('countries-list');
-
-        // Para cada país, criamos um item de lista com o nome, a capital, e a bandeira
-        countries.forEach(country => {
-          // Criar um contêiner div para cada país
-          const countryInfo = document.createElement('div');
-          countryInfo.classList.add('col-12', 'col-sm-6', 'col-md-4', 'col-lg-3');
-
-          // Conteúdo da card com as classes do Bootstrap
-          countryInfo.innerHTML = `
-        <div class="card shadow-sm w-100 ">
-           <img src="${country.flags.png}" class="card-img-top img-fluid rounded" alt="Bandeira de ${country.name.common}">
-            <title>Placeholder</title>
-            
+    <!-- Template para os cards -->
+    <template id="country-card-template">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm w-100">
+          <img src="" class="card-img-top img-fluid rounded" alt="">
           <div class="card-body">
-            <h5 class="card-title">${country.name.common}</h5>
-            <p class="card-text">Região: ${country.region}</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
           </div>
         </div>
-      `;
+      </div>
+    </template>
+  </div>
 
-          // Adicionar o item à lista de países
-          countriesListDiv.appendChild(countryInfo);
-        });
-      })
-      .catch(error => console.log('Erro ao acessar a API:', error));
-  </script>
+  <!-- Link para o arquivo JavaScript -->
 
 </body>
-
 </html>
+<script>fetch('https://restcountries.com/v3.1/all')
+  .then(response => response.json())
+  .then(countries => {
+    const countriesListDiv = document.getElementById('countries-list');
+    const template = document.getElementById('country-card-template');
+
+    // Renderiza todos os países
+    countries.forEach(country => {
+      // Clona o conteúdo do template
+      const clone = template.content.cloneNode(true);
+
+      // Preenche os dados do país
+      clone.querySelector('img').src = country.flags.png;
+      clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
+      clone.querySelector('.card-title').textContent = country.name.common;
+      clone.querySelector('.card-text').textContent = country.region;
+
+      // Adiciona o clone ao container
+      countriesListDiv.appendChild(clone);
+    });
+  });
+  </script>
