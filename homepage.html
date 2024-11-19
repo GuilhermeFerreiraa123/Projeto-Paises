@@ -25,6 +25,8 @@
             border-radius: 0px;
             border-color: #0f549e;
             color: #0f549e;
+            --bs-btn-active-bg: #0f549e;
+            --bs-btn-active-border-color: #0f549e;
         }
 
         .btn-outline-success:hover {
@@ -32,7 +34,6 @@
             color: #fff;
             --bs-btn-hover-border-color: #0f549e;
         }
-
         .navbar-light {
             background-color: transparent !important;
             box-shadow: none !important;
@@ -56,6 +57,15 @@
         }
         .icon{
             font-size: 20px;
+            color: #0f549e;
+        }
+        .icon:hover{
+            color: white;
+        }
+        footer{
+            margin-left: calc(-50vw + 50%);
+            width: 100vw;
+            background-color: #f3f1f1;
         }
     </style>
 </head>
@@ -63,7 +73,7 @@
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="homepage.html">
                 <img src="img/logo.png" alt="Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -91,6 +101,56 @@
             </div>
         </div>
     </header>
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <h2><b>Sobre Nós</b></h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 box-info">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
+                <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                <div class="card-body">
+                  <p class="card-text-title">Guilherme Ferreira</p>
+                  <p class="card-text-subtitle">Estudante</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
+                  <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                  <div class="card-body">
+                    <p class="card-text-title">Miguel Ribeiro</p>
+                    <p class="card-text-subtitle">Estudante</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                          <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
+                  <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                  <div class="card-body">
+                    <p class="card-text-title">Tiago Carmo</p>
+                    <p class="card-text-subtitle">Estudante</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                          <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
     <div class="container">
         <footer class="py-3 my-4">
             <a class="footer-brand" href="#">

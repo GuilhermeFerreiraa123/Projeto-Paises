@@ -10,6 +10,47 @@ body {
     line-height: 1.6;
 }
 
+.album{
+    background-color: white;
+    text-align: center;
+}
+.container h2{
+    margin-bottom: 3.5%;
+}
+.info-buttons{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.icon-arrow{
+    vertical-align: -.110em;
+    font-size: 20px;
+}
+.btn-group{
+    margin-left: 24%;
+}
+.foto-perfil{
+    margin: 5% 10%;
+}
+.card-body{
+    padding-top: 0%;
+}
+.card-text-title{
+    font-size: 120%;
+    margin-bottom: 1%;
+}
+.card-text-subtitle{
+    color: gray;
+    font-size: 94%;
+}
+.box-info{
+    margin-bottom: 10%;
+}
+
+
+
+
+
 /* Estilo para a navbar */
 .navbar {
     display: flex;
