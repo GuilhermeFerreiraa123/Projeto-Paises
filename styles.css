@@ -9,6 +9,68 @@
 body {
     line-height: 1.6;
 }
+.nav-link {
+    margin: 0 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .nav-link:hover {
+    color: #0f549e;
+  }
+
+  .btn-outline-success {
+    border-radius: 0px;
+    border-color: #0f549e;
+    color: #0f549e;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #0f549e;
+    color: #fff;
+    --bs-btn-hover-border-color: #0f549e;
+  }
+
+  .navbar-expand-lg {
+    box-shadow: 0 0px 0px;
+  }
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container ul li {
+    color: black;
+}
+
+.border-under {
+    border-bottom: 2px solid #ddd;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.icon {
+    font-size: 20px;
+    color: #0f549e;
+}
+
+.icon:hover {
+    color: white;
+}
+
+footer {
+    margin-left: calc(-50vw + 50%);
+    width: 100vw;
+    background-color: #f3f1f1;
+}
+
+.carousel-indicators li {
+    background-color: #0f549e;
+}
+
 
 .album{
     background-color: white;
@@ -89,6 +151,7 @@ body {
     max-width: 1100px; 
 }
 .explorar-butao{
+    text-decoration: none;
     padding: 7px 34px;
     border-radius: 0px; 
     font-size: large;
