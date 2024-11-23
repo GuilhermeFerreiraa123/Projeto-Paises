@@ -4,35 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Lista de Países</title>
   <style>
-    .nav-link {
-      margin: 0 15px;
-      color: black;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .nav-link:hover {
-      color: #007bff;
-    }
-
-    .btn-outline-success {
-      border-radius: 0px;
-      border-color: #007bff;
-      color: #007bff;
-    }
-
-    .btn-outline-success:hover {
-      background-color: #007bff;
-      color: #fff;
-      --bs-btn-hover-border-color: #007bff;
-    }
-
-    .navbar-expand-lg {
-      box-shadow: 0 0px 0px;
-    }
+  
 
     .col-12 {
       padding-bottom: 2%;
@@ -51,21 +28,38 @@
     }
   </style>
 </head>
-<header class="navbar">
-    <div class="logo">
-        <img src="img/logo.png">
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="Paisespage.html">Países</a></li>
-            <li><a href="#">Loja</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#" class="active">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
+
 <body>
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html">
+        <img src="img/logo.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Paisespage.html">Países</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Loja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
   <div class="container mt-5">
     <!-- Container onde os países serão renderizados -->
     <div id="countries-list" class="row"></div>
@@ -87,26 +81,27 @@
   <!-- Link para o arquivo JavaScript -->
 
 </body>
+
 </html>
 <script>fetch('https://restcountries.com/v3.1/all')
-  .then(response => response.json())
-  .then(countries => {
-    const countriesListDiv = document.getElementById('countries-list');
-    const template = document.getElementById('country-card-template');
+    .then(response => response.json())
+    .then(countries => {
+      const countriesListDiv = document.getElementById('countries-list');
+      const template = document.getElementById('country-card-template');
 
-    // Renderiza todos os países
-    countries.forEach(country => {
-      // Clona o conteúdo do template
-      const clone = template.content.cloneNode(true);
+      // Renderiza todos os países
+      countries.forEach(country => {
+        // Clona o conteúdo do template
+        const clone = template.content.cloneNode(true);
 
-      // Preenche os dados do país
-      clone.querySelector('img').src = country.flags.png;
-      clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
-      clone.querySelector('.card-title').textContent = country.name.common;
-      clone.querySelector('.card-text').textContent = country.region;
+        // Preenche os dados do país
+        clone.querySelector('img').src = country.flags.png;
+        clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
+        clone.querySelector('.card-title').textContent = country.name.common;
+        clone.querySelector('.card-text').textContent = country.region;
 
-      // Adiciona o clone ao container
-      countriesListDiv.appendChild(clone);
+        // Adiciona o clone ao container
+        countriesListDiv.appendChild(clone);
+      });
     });
-  });
-  </script>
+</script>
