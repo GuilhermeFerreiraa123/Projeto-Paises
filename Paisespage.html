@@ -4,36 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Lista de Países</title>
   <style>
-    .nav-link {
-      margin: 0 15px;
-      color: black;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .nav-link:hover {
-      color: #007bff;
-    }
-
-    .btn-outline-success {
-      border-radius: 0px;
-      border-color: #007bff;
-      color: #007bff;
-    }
-
-    .btn-outline-success:hover {
-      background-color: #007bff;
-      color: #fff;
-      --bs-btn-hover-border-color: #007bff;
-    }
-
-    .navbar-expand-lg {
-      box-shadow: 0 0px 0px;
-    }
-
     .col-12 {
       padding-bottom: 2%;
       cursor: pointer;
@@ -51,23 +26,83 @@
     }
   </style>
 </head>
-<header class="navbar">
-    <div class="logo">
-        <img src="img/logo.png">
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="Paisespage.html">Países</a></li>
-            <li><a href="#">Loja</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#" class="active">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
+
 <body>
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html">
+        <img src="img/logo.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Paisespage.html"><b>Países</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Loja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <br>
+  <div class="filters-box-sections">
+    <div>
+      <b>FILTROS</b><br>
+
+      <div class="filters-row col-6">
+        <div class="filters-box col-4">
+          <p>Região</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">África 🌏</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">América 🌏</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">Ásia 🌏</label>
+          </div><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio4">Europa🌏</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            <label class="form-check-label" for="inlineRadio5">Oceania 🌏</label>
+          </div>
+        </div>
+        <div class="filters-box col-4">
+          <p>Dados</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="1000" class="slider" id="myRange">
+            <div class="container-center">
+              <input type="text" id="value_bar_people" class="form-control" placeholder="Valor da população" aria-label="Valor da população" aria-describedby="basic-addon1">
+            </div>
+          
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
   <div class="container mt-5">
-    <!-- Container onde os países serão renderizados -->
     <div id="countries-list" class="row"></div>
 
     <!-- Template para os cards -->
@@ -87,26 +122,51 @@
   <!-- Link para o arquivo JavaScript -->
 
 </body>
+
 </html>
 <script>fetch('https://restcountries.com/v3.1/all')
-  .then(response => response.json())
-  .then(countries => {
-    const countriesListDiv = document.getElementById('countries-list');
-    const template = document.getElementById('country-card-template');
+    .then(response => response.json())
+    .then(countries => {
+      const countriesListDiv = document.getElementById('countries-list');
+      const template = document.getElementById('country-card-template');
 
-    // Renderiza todos os países
-    countries.forEach(country => {
-      // Clona o conteúdo do template
-      const clone = template.content.cloneNode(true);
+      // Renderiza todos os países
+      countries.forEach(country => {
+        // Clona o conteúdo do template
+        const clone = template.content.cloneNode(true);
 
-      // Preenche os dados do país
-      clone.querySelector('img').src = country.flags.png;
-      clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
-      clone.querySelector('.card-title').textContent = country.name.common;
-      clone.querySelector('.card-text').textContent = country.region;
+        // Preenche os dados do país
+        clone.querySelector('img').src = country.flags.png;
+        clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
+        clone.querySelector('.card-title').textContent = country.name.common;
+        clone.querySelector('.card-text').textContent = country.region;
 
-      // Adiciona o clone ao container
-      countriesListDiv.appendChild(clone);
+        // Adiciona o clone ao container
+        countriesListDiv.appendChild(clone);
+      });
     });
-  });
-  </script>
+</script>
+
+<script>
+  var slider = document.getElementById("myRange");
+  var input = document.getElementById("value_bar_people");
+
+  // Sincronizar o input com o slider inicialmente
+  input.value = slider.value;
+
+  // Atualizar o input quando o slider for alterado
+  slider.oninput = function () {
+    input.value = this.value;
+  };
+
+  // Atualizar o slider quando o input for alterado
+  input.oninput = function () {
+    // Verificar se o valor no input é um número válido
+    let value = parseInt(this.value, 10);
+    if (!isNaN(value)) {
+      // Ajustar o valor do slider (respeitando os limites min e max)
+      value = Math.max(slider.min, Math.min(slider.max, value));
+      slider.value = value;
+    }
+  };
+</script>
