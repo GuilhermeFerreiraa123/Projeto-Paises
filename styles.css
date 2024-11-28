@@ -103,9 +103,20 @@ footer {
 .foto-perfil {
     margin: 5% 10%;
 }
+.card{
+    border-radius: 0%;
+}
+.card:hover{
+    border: 2px solid;
+    border-color: #0f549e;
+}
 
 .card-body {
     padding-top: 0%;
+    border-radius: 0%;
+}
+.card-title{
+    text-align: center;
 }
 
 .card-text-title {
@@ -338,6 +349,198 @@ footer {
     box-shadow: transparent;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formulario-title{
+    text-align: center;
+}
+#zonaConteudo{
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    font-size: 11pt;
+}
+#zonaConteudo h2{
+    display: inline-block;
+    margin: 0px 10px;
+    color: black;
+    font-size: 20pt;
+    letter-spacing: 3pt;
+    text-align: left;
+    border-bottom: 2px dotted #9c4b1c;
+}
+#zonaConteudo h2::first-letter{
+    font-size: calc(20pt * 1.5);
+}
+#zonaConteudo table {
+    width: 96%;
+    border: 1px solid black;
+    margin: 20px 2%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#zonaConteudo table td, 
+#zonaConteudo table th{
+    border-left: 1px solid black;
+}
+#zonaConteudo tbody tr{
+    border-bottom: 1px dashed #9c4b1c;
+}
+
+#zonaConteudo tbody tr:nth-child(4n){
+    border-bottom: 1px solid black;
+}
+#zonaConteudo thead{
+    border-bottom: 3px double black;
+}
+#gridListFilmes tr:hover{
+    background-color: #939393;
+    color: white;
+}
+#ultimacoluna{
+    width: 30px;
+    padding: 0%;
+}
+#gridListFilmes img{
+    height: 28px;
+    width: 28px;
+    margin-top: 2px;
+}
+form{
+    border-bottom: 3px solid #9c4b1c;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+}
+form fieldset{
+    margin: 0px 2% 1% 2%;
+    padding: 1%;
+    border: 1px solid #9c4b1c; 
+    display: block;
+}
+form legend{
+    font-weight: bold;
+    font-size: 12pt;
+    letter-spacing: 3px;
+}
+form label{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 11pt;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0px 2px;
+    padding: 2px 5px;
+}
+#grpGeral label, #grpAtores label{
+    width: 130px;
+    text-align: right;
+}
+#grpIdioma label, #grpGenero label{
+    width: calc(100% - 75px);   
+}
+#grpGeral input, #grpAtores input{
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+    margin: 1px 2px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    width: calc(100% - 180px);
+    background-color: white;
+}
+#conjuntoField small input{
+    width: 100px;
+}
+textarea{
+    height: 100px;
+    width: 98%;
+    resize: none;
+    margin-left: 1%;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#grpGenero input, #grpIdioma input{
+    margin-left: 10px;
+    width: 20px;
+}
+#grpGeral, #grpAtores{
+    float: left;
+    width: 60%;
+}
+#grpIdioma{
+    margin-bottom: 70px;
+}
+#grpBotoes{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsividade */

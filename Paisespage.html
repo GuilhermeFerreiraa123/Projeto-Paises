@@ -15,10 +15,12 @@
     }
 
     .card-img-top {
-      width: 100%;
+      width: 90%;
       height: 90%;
       object-fit: cover;
       max-height: 200px;
+      border-radius: 0% !important;
+      margin: 5% 5%;
     }
 
     .w-100 {
@@ -49,7 +51,7 @@
             <a class="nav-link" href="#">Loja</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" href="Sobre.html">Sobre</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
@@ -63,41 +65,49 @@
     <div>
       <b>FILTROS</b><br>
 
-      <div class="filters-row col-6">
+      <div class="filters-row col-7">
         <div class="filters-box col-4">
+          <span id="numeropaises">Países: </span>
           <p>Região</p>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="Africa">
             <label class="form-check-label" for="inlineRadio1">África 🌏</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2"
+              value="Americas">
             <label class="form-check-label" for="inlineRadio2">América 🌏</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="Asia">
             <label class="form-check-label" for="inlineRadio3">Ásia 🌏</label>
           </div><br>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="Europe">
             <label class="form-check-label" for="inlineRadio4">Europa🌏</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="Oceania">
             <label class="form-check-label" for="inlineRadio5">Oceania 🌏</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6"
+              value="Antarctic">
+            <label class="form-check-label" for="inlineRadio6">Antártida 🌏</label>
           </div>
         </div>
         <div class="filters-box col-4">
           <p>Dados</p>
           <div class="slidecontainer">
-            <input type="range" min="1" max="1000" class="slider" id="myRange">
+            <input type="range" min="1" max="1500000000" class="slider" id="myRange">
             <div class="container-center">
-              <input type="text" id="value_bar_people" class="form-control" placeholder="Valor da população" aria-label="Valor da população" aria-describedby="basic-addon1">
+              <input type="text" id="value_bar_people" class="form-control" placeholder="População"
+                aria-label="População" aria-describedby="basic-addon1">
             </div>
-          
+
           </div>
         </div>
-        
+
 
       </div>
     </div>
@@ -108,65 +118,96 @@
     <!-- Template para os cards -->
     <template id="country-card-template">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
         <div class="card shadow-sm w-100">
           <img src="" class="card-img-top img-fluid rounded" alt="">
           <div class="card-body">
             <h5 class="card-title"></h5>
-            <p class="card-text"></p>
           </div>
         </div>
       </div>
     </template>
   </div>
+  <div class="container">
+    <footer class="py-3 my-4">
+        <a class="footer-brand" href="#">
+            <img src="img/logo.png" alt="Logo" height="60">
+        </a>
+        <ul class="nav justify-content-center pb-1">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+            <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
 
-  <!-- Link para o arquivo JavaScript -->
-
+        </ul>
+        <ul class="nav justify-content-center pb-3 mb-3 border-under">
+            <li class="ms-3">
+                <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
+            </li>
+            <li class="ms-3">
+                <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
+            </li>
+            <li class="ms-3">
+                <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
+            </li>
+            <li class="ms-3">
+                <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
+            </li>
+        </ul>
+        <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+    </footer>
+</div>
 </body>
 
 </html>
-<script>fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(countries => {
-      const countriesListDiv = document.getElementById('countries-list');
-      const template = document.getElementById('country-card-template');
-
-      // Renderiza todos os países
-      countries.forEach(country => {
-        // Clona o conteúdo do template
-        const clone = template.content.cloneNode(true);
-
-        // Preenche os dados do país
-        clone.querySelector('img').src = country.flags.png;
-        clone.querySelector('img').alt = 'Bandeira de ${country.name.common}';
-        clone.querySelector('.card-title').textContent = country.name.common;
-        clone.querySelector('.card-text').textContent = country.region;
-
-        // Adiciona o clone ao container
-        countriesListDiv.appendChild(clone);
-      });
-    });
-</script>
-
 <script>
+
   var slider = document.getElementById("myRange");
   var input = document.getElementById("value_bar_people");
+  var countriesListDiv = document.getElementById('countries-list');
+  var template = document.getElementById('country-card-template');
+  var countriesData = []; // Para armazenar os dados dos países
 
-  // Sincronizar o input com o slider inicialmente
+
   input.value = slider.value;
+
+  
 
   // Atualizar o input quando o slider for alterado
   slider.oninput = function () {
     input.value = this.value;
+    filterCountries();
   };
 
   // Atualizar o slider quando o input for alterado
   input.oninput = function () {
-    // Verificar se o valor no input é um número válido
     let value = parseInt(this.value, 10);
     if (!isNaN(value)) {
-      // Ajustar o valor do slider (respeitando os limites min e max)
       value = Math.max(slider.min, Math.min(slider.max, value));
       slider.value = value;
+      filterCountries();
     }
+  };
+
+  // Fetch inicial para carregar os países
+  fetch('https://restcountries.com/v3.1/all')
+    .then(response => response.json())
+    .then(countries => {
+      countriesData = countries; // Armazena os dados para uso posterior
+      renderCountries(countriesData); // Renderiza todos os países inicialmente
+    });
+
+  // Função para renderizar países na tela
+  function renderCountries(countries) {
+    countriesListDiv.innerHTML = ''; // Limpa a lista antes de renderizar
+    countries.forEach(country => {
+      const clone = template.content.cloneNode(true);
+      clone.querySelector('img').src = country.flags.png;
+      clone.querySelector('img').alt = `Bandeira de ${country.name.common}`;
+      clone.querySelector('.card-title').textContent = country.name.common;
+
+      countriesListDiv.appendChild(clone);
+    });
   };
 </script>

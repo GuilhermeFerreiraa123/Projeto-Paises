@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries World</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="img/logo.png" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Paisespage.html">Países</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sobre.html"><b>Sobre</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="#">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--<div class="col-9">
+        <form action="formulário_submetido.html" method="Get">
+            <div class="col-4">
+                <div class="">
+                    <h4 class="formulario-title mb-3">Formulário de ajuda</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-12">
+                                <label for="firstName" class="form-label">Primeiro nome</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Primeiro nome"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    Introduza um primeiro nome válido.
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="lastName" class="form-label">Último nome</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Último nome" value=""
+                                    required>
+                                <div class="invalid-feedback">
+                                    Introduza um ultimo nome válido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <label for="username" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="username" placeholder="E-mail" required>
+                                <div class="invalid-feedback">
+                                    Introduza um endereço de e-mail válido.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-5">
+                            <label for="number" class="form-label">Número de telefone</label>
+                            <input type="number" class="form-control" id="number" placeholder="Número de telefone"
+                                required>
+                            <div class="invalid-feedback">
+                                Introduza um número de telefone válido.
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select" id="country" required>
+                                <option value="">Choose...</option>
+                                <option value="">BUG</option>
+                                <option value="">INFORMAÇÃO INCORRETA</option>
+                                <option value=""></option>
+                                <option value="">OUTRA...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Último nome</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Último nome" value=""
+                                required>
+                            <div class="invalid-feedback">
+                                Introduza um ultimo nome válido.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Último nome</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="lastName" class="form-label">Anexos</label>
+                            <input type="file" class="form-control" id="lastName" placeholder="Último nome" value="">
+                            <div class="invalid-feedback">
+                                Introduza um ultimo nome válido.
+                            </div>
+                        </div>
+                </div>
+
+            </div>-->
+
+
+    </form>
+    </div>
+    <section id="zonaConteudo">
+        <header>
+            <h2>Ficha Técnica</h2>
+        </header>
+        <form action="#" method="POST" id="formDetalheElemento" class="formFicha">
+            <fieldset id="grpGeral">
+                <legend>Geral</legend>
+                <div class="conjuntoField small">
+                    <label for="campoAno">Primeiro Nome</label>
+                    <input type="text" name="ano" id="campoAno" value="2012">
+                </div>
+                <div class="conjuntoField">
+                    <label for="campoTitle">Último Nome</label>
+                    <input type="text" name="title" id="campoTitle" value="The Avengers">
+                </div>
+                <div class="conjuntoField">
+                    <label for="campoPais">Endereço de e-mail</label>
+                    <input type="text" name="pais" id="campoPais" value="United States">
+                </div>
+                <div class="conjuntoField">
+                    <label for="campoDiretor">Número de telefone</label>
+                    <input type="text" name="diretor" id="campoDiretor" value="Joss Whedon">
+                </div>
+            </fieldset>
+            <fieldset id="grpDescricao">
+                <legend>Descrição</legend>
+                <div class="conjuntoField small">
+                    <label for="campoAno">Tipo de Problema</label>
+                    <input type="text" name="ano" id="campoAno" value="2012">
+                </div>
+                <div class="conjuntoField">
+                    <label for="campoTitle">Assunto do Problema</label>
+                    <input type="text" name="title" id="campoTitle" value="The Avengers">
+                </div>
+                <textarea name="descricao">Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity
+                </textarea>
+                <div class="conjuntoField">
+                    <label for="campoTitle">Anexos do Problema</label>
+                    <input type="file" name="title" id="campoTitle" value="The Avengers">
+                </div>
+            </fieldset>
+            <fieldset id="grpBotoes">
+                <input type="reset" value="Cancelar">
+                <input type="submit" value="Guardar">
+            </fieldset>
+        </form>
+    </section>
+
+    <aside id="zonaPublicidade">
+        <a href="http://www.ipleiria.pt"><img src="img/pub-1.jpg" alt="Imagem de publicidade 1"></a>
+        <a href="http://www.estg.ipleiria.pt/"><img src="img/pub-2.png" alt="Imagem de publicidade 2"></a>
+    </aside>
+
+    <footer>
+        @Copyright 2023, IPLeiria
+    </footer>
+</body>
+
+</html>
