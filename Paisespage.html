@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Lista de Países</title>
   <style>
@@ -107,107 +108,66 @@
 
           </div>
         </div>
-
+        <input id="titulo" type="text" class="form-control" placeholder="Pesquisa" name="nome">
+        <button id="btn-search" type="submit" class="btn btn-secondary">Search</button>
 
       </div>
     </div>
   </div>
-  <div class="container mt-5">
-    <div id="countries-list" class="row"></div>
 
-    <!-- Template para os cards -->
-    <template id="country-card-template">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 
-        <div class="card shadow-sm w-100">
-          <img src="" class="card-img-top img-fluid rounded" alt="">
-          <div class="card-body">
+  <div class="lista-paises">
+    <div class="container mt-5 card-paises">
+      <div id="countries-list" class="row"></div>
+      <template id="country-card-template">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm w-100 card-info-paises">
+            <a class="link-body-emphasis" href="#"><i class="bi bi-star icon-favorites"></i></a>
+            <img src="" class="card-img-top img-fluid rounded" alt="">
             <h5 class="card-title"></h5>
+              <h5 class="card-body"></h5>
           </div>
         </div>
-      </div>
-    </template>
+      </template>
+    </div>
   </div>
+  <div id="Erro-Message">
+    <p class="erro-text"><b>País não encontrado</b></p>
+  </div>
+
   <div class="container">
     <footer class="py-3 my-4">
-        <a class="footer-brand" href="#">
-            <img src="img/logo.png" alt="Logo" height="60">
-        </a>
-        <ul class="nav justify-content-center pb-1">
-            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
-            <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
+      <a class="footer-brand" href="#">
+        <img src="img/logo.png" alt="Logo" height="60">
+      </a>
+      <ul class="nav justify-content-center pb-1">
+        <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+        <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
 
-        </ul>
-        <ul class="nav justify-content-center pb-3 mb-3 border-under">
-            <li class="ms-3">
-                <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
-            </li>
-            <li class="ms-3">
-                <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
-            </li>
-            <li class="ms-3">
-                <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
-            </li>
-            <li class="ms-3">
-                <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
-            </li>
-        </ul>
-        <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+      </ul>
+      <ul class="nav justify-content-center pb-3 mb-3 border-under">
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
+        </li>
+      </ul>
+      <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
     </footer>
-</div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>
-<script>
-
-  var slider = document.getElementById("myRange");
-  var input = document.getElementById("value_bar_people");
-  var countriesListDiv = document.getElementById('countries-list');
-  var template = document.getElementById('country-card-template');
-  var countriesData = []; // Para armazenar os dados dos países
-
-
-  input.value = slider.value;
-
-  
-
-  // Atualizar o input quando o slider for alterado
-  slider.oninput = function () {
-    input.value = this.value;
-    filterCountries();
-  };
-
-  // Atualizar o slider quando o input for alterado
-  input.oninput = function () {
-    let value = parseInt(this.value, 10);
-    if (!isNaN(value)) {
-      value = Math.max(slider.min, Math.min(slider.max, value));
-      slider.value = value;
-      filterCountries();
-    }
-  };
-
-  // Fetch inicial para carregar os países
-  fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(countries => {
-      countriesData = countries; // Armazena os dados para uso posterior
-      renderCountries(countriesData); // Renderiza todos os países inicialmente
-    });
-
-  // Função para renderizar países na tela
-  function renderCountries(countries) {
-    countriesListDiv.innerHTML = ''; // Limpa a lista antes de renderizar
-    countries.forEach(country => {
-      const clone = template.content.cloneNode(true);
-      clone.querySelector('img').src = country.flags.png;
-      clone.querySelector('img').alt = `Bandeira de ${country.name.common}`;
-      clone.querySelector('.card-title').textContent = country.name.common;
-
-      countriesListDiv.appendChild(clone);
-    });
-  };
-</script>
