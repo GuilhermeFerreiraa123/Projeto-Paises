@@ -42,6 +42,40 @@
             </div>
         </div>
     </header>
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Membros da Equipa</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="caixa-info card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-1.jpg'); ">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Guilherme Ferreira</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Miguel Ribeiro</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Tiago Carmo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
     <!--<div class="col-9">
         <form action="formulário_submetido.html" method="Get">
             <div class="col-4">
@@ -136,36 +170,35 @@
                 <legend>Geral</legend>
                 <div class="conjuntoField small">
                     <label for="campoAno">Primeiro Nome</label>
-                    <input type="text" name="ano" id="campoAno" value="2012">
+                    <input type="text" name="ano" id="campoAno" value="Primeiro Nome">
                 </div>
                 <div class="conjuntoField">
                     <label for="campoTitle">Último Nome</label>
-                    <input type="text" name="title" id="campoTitle" value="The Avengers">
+                    <input type="text" name="title" id="campoTitle" value="Último Nome">
                 </div>
                 <div class="conjuntoField">
                     <label for="campoPais">Endereço de e-mail</label>
-                    <input type="text" name="pais" id="campoPais" value="United States">
+                    <input type="text" name="pais" id="campoPais" value="E-mail">
                 </div>
                 <div class="conjuntoField">
                     <label for="campoDiretor">Número de telefone</label>
-                    <input type="text" name="diretor" id="campoDiretor" value="Joss Whedon">
+                    <input type="text" name="diretor" id="campoDiretor" value="Número de Telefone">
                 </div>
-            </fieldset>
-            <fieldset id="grpDescricao">
+                <br>
+                <br>
                 <legend>Descrição</legend>
                 <div class="conjuntoField small">
-                    <label for="campoAno">Tipo de Problema</label>
-                    <input type="text" name="ano" id="campoAno" value="2012">
+                    <label for="campoProblema">Tipo de Problema</label>
+                    <input type="text" name="problema" id="campoProblema" value="">
                 </div>
                 <div class="conjuntoField">
-                    <label for="campoTitle">Assunto do Problema</label>
-                    <input type="text" name="title" id="campoTitle" value="The Avengers">
+                    <label for="campoAssunto">Assunto do Problema</label>
+                    <input type="text" name="Assunto" id="campoAssunto" value="">
                 </div>
-                <textarea name="descricao">Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity
-                </textarea>
+                <textarea name="descricao">Esclareça aqui o seu problema de forma específica!</textarea>
                 <div class="conjuntoField">
-                    <label for="campoTitle">Anexos do Problema</label>
-                    <input type="file" name="title" id="campoTitle" value="The Avengers">
+                    <label for="campoAnexos">Anexos do Problema</label>
+                    <input type="file" name="Anexos" id="campoAnexos" value="">
                 </div>
             </fieldset>
             <fieldset id="grpBotoes">
@@ -174,15 +207,36 @@
             </fieldset>
         </form>
     </section>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <a class="footer-brand" href="#">
+                <img src="img/logo.png" alt="Logo" height="60">
+            </a>
+            <ul class="nav justify-content-center pb-1">
+                <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+                <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
 
-    <aside id="zonaPublicidade">
-        <a href="http://www.ipleiria.pt"><img src="img/pub-1.jpg" alt="Imagem de publicidade 1"></a>
-        <a href="http://www.estg.ipleiria.pt/"><img src="img/pub-2.png" alt="Imagem de publicidade 2"></a>
-    </aside>
-
-    <footer>
-        @Copyright 2023, IPLeiria
-    </footer>
+            </ul>
+            <ul class="nav justify-content-center pb-3 mb-3 border-under">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
+                </li>
+            </ul>
+            <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+        </footer>
+    </div>
 </body>
 
 </html>
