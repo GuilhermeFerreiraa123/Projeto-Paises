@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    
+
 </head>
 
 <body>
@@ -42,48 +45,36 @@
         </div>
     </header>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div style="text-align: center; padding: 20px;">
-                    <h1>Descobre o Japão</h1>
-                    <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às
-                        antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.</p>
-                    <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
-                    <button
-                        style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Explorar</button>
-                    <div>
-                        <img src="path/to/japan-temple-image.jpg" alt="Templo no Japão"
-                            style="max-width: 400px; margin-top: 20px;">
+                <div class="container d-flex">
+                    <div class="carousel-caption text-start">
+                        <h1>Descobre Grécia</h1>
+                        <p class="opacity-75">Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova
+                            Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.
+                            
+                            Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco</p>
+                        <p><a class="btn my-2 my-sm-0 btn-exp" href="#">Explorar</a></p>
                     </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div style="text-align: center; padding: 20px;">
-                    <h1>Explora Nova Iorque</h1>
-                    <p>Descobre o coração vibrante de uma cidade que nunca dorme. Aventura-te pelas ruas iluminadas e
-                        experimenta a energia única da Big Apple.</p>
-                    <button
-                        style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Explorar</button>
-                    <div>
-                        <img src="path/to/nyc-image.jpg" alt="Nova Iorque" style="max-width: 400px; margin-top: 20px;">
-                    </div>
+                    <img src="img/greece.png" alt="Imagem de Destino" >
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+    
 
 
     <div class="section-info-box">
@@ -117,7 +108,7 @@
                             <p class="card-text-subtitle">Estudante</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais
+                                    <a class="btn  my-2 my-sm-0 info-buttons" href="#">Mais
                                         Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
                                 </div>
                             </div>
@@ -133,7 +124,7 @@
                             <p class="card-text-subtitle">Estudante</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais
+                                    <a class="btn  my-2 my-sm-0 info-buttons" href="#">Mais
                                         Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
                                 </div>
                             </div>
@@ -149,7 +140,7 @@
                             <p class="card-text-subtitle">Estudante</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a class="btn btn-outline-success my-2 my-sm-0 info-buttons" href="#">Mais
+                                    <a class="btn my-2 my-sm-0 info-buttons" href="#">Mais
                                         Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
                                 </div>
                             </div>

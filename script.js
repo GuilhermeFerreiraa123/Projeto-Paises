@@ -9,6 +9,8 @@ $(document).ready(function () {
 function carregarTodosPaises() {
   $('#countries-list').html('');
 
+  
+
   $.ajax({
     method: 'GET',
     url: 'https://restcountries.com/v3.1/all'

@@ -14,20 +14,29 @@ body {
 }
 
 .nav-link {
-    margin: 0 15px;
+    margin: 10px 20px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
 }
 
 .nav-link:hover {
     color: #0f549e;
 }
 
-.btn-outline-success {
+.navbar-brand img {
+    height: 80px;
+}
+
+.btn{
     border-radius: 0px;
     border-color: #0f549e;
     color: #0f549e;
+    font-size: 1.1rem;
+    padding: 10px 20px;
 }
+
+
 
 .btn-outline-success:hover {
     background-color: #0f549e;
@@ -35,9 +44,11 @@ body {
     --bs-btn-hover-border-color: #0f549e;
 }
 
-.navbar-expand-lg {
-    box-shadow: 0 0px 0px;
+.btn-exp {
+    padding: 0.5em 3% 0.5em 3%;
+
 }
+
 
 .footer-brand {
     display: flex;
@@ -65,12 +76,13 @@ body {
     color: white;
 }
 
-.link-body-emphasis{
+.link-body-emphasis {
     margin-top: 3%;
     margin-right: 3%;
     text-align: right;
 }
-.icon-favorites{
+
+.icon-favorites {
     color: gold;
     font-size: 120%;
 }
@@ -81,9 +93,6 @@ footer {
     background-color: #f3f1f1;
 }
 
-.carousel-indicators li {
-    background-color: #0f549e;
-}
 
 
 .album {
@@ -113,10 +122,12 @@ footer {
 .foto-perfil {
     margin: 5% 10%;
 }
-.card{
+
+.card {
     border-radius: 0%;
 }
-.card:hover{
+
+.card:hover {
     border: 2px solid;
     border-color: #0f549e;
 }
@@ -125,7 +136,8 @@ footer {
     padding-top: 0%;
     border-radius: 0%;
 }
-.card-title{
+
+.card-title {
     text-align: center;
 }
 
@@ -215,221 +227,107 @@ footer {
     position: sticky;
 }
 
-.logo img {
-    padding: 6px;
-    height: 75px;
-    width: 160px;
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #333;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.menu ul li a.active {
-    border: 2px solid #0f549e;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-}
-
-.menu-div ul li a.active {
-    border: 2px solid #0f549e;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-}
-
-.menu-div li a:hover,
-.menu-div li a:focus {
-    background-color: #0f549e;
-    /* Cor de fundo azul */
-    color: #fff;
-    /* Cor do texto em branco */
-}
-
-/* Hover para os links em geral */
-.menu ul li a:hover,
-.menu ul li a:focus {
-    color: #0f549e;
-    /* Cor do texto ao passar o cursor */
-}
-
-.btn-outline-success {
-    border-radius: 0px;
-    border-color: #0f549e;
-    color: #0f549e;
-    --bs-btn-active-bg: #0f549e;
-    --bs-btn-active-border-color: #0f549e;
-}
-
-.btn-outline-success:hover {
-    background-color: #0f549e;
-    color: #fff;
-    --bs-btn-hover-border-color: #0f549e;
-}
-
-.filters-box {
-    margin-left: 2%;
-    flex: 1;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 5%;
-}
-
-.filters-box:hover {
-    border-radius: 0px;
-    border: 2px solid #0f549e;
-}
-
-.filters-box b {
-    letter-spacing: 4px;
-}
-
-.filters-box p {
-    margin: 0 0 10px;
-    font-weight: bold;
-}
-
-.filters-row {
-    display: flex;
-    gap: 20px; 
-}
-
-.filters-box-sections {
-    height: 8%;
-    background-color: #d6d1d1;
-}
-
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #0f549e 10%, #fff 70%);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #092d53;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #092d53;
-    cursor: pointer;
-}
-.container-center{
+.container-center {
     margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Para ocupar a altura total do contêiner */
-    position: relative; /* Permite flexibilidade para alinhamento */
+    height: 100%;
+    /* Para ocupar a altura total do contêiner */
+    position: relative;
+    /* Permite flexibilidade para alinhamento */
 }
-.form-control{
+
+.form-control {
     width: 30%;
     height: 20%;
     border-radius: 5%;
     text-align: center;
-    
-}
-.form-control:focus{
-    box-shadow: transparent;
-    
+
 }
 
-#Erro-Message{
+.form-control:focus {
+    box-shadow: transparent;
+
+}
+
+#Erro-Message {
     text-align: center;
     color: red;
 }
 
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.carousel-caption {
+   
+    bottom: 3rem;
+    z-index: 10;
+}
+.carousel-inner img {
+    padding: 10em 1em;
+    width: 50%; 
+    object-fit: cover;
+    margin-left: auto; 
+    margin-right: 0; 
+}
+.carousel-caption {
+    padding: 10% 2%;
+}
+.carousel-caption h1 {
+    font-size: 50px;
+   font-weight: 700;
+   color: #000;
+   padding-bottom: 4%;
+}
+.carousel-item {
+    height: 45rem;
+    background-color: #ededed;
 
 
+}
+.opacity-75 {
+   max-width: 50%;
+   color: #000;
+}
+.featurette-divider {
+    margin: 5rem 0;
+}
 
 
+.featurette-heading {
+    letter-spacing: -.05rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.col-info-membros{
+.col-info-membros {
     text-align: center;
     margin-top: 40% !important;
 }
-.caixa-info:hover{
+
+.caixa-info:hover {
     border-radius: 0%;
 }
 
-form{
+form {
     border-bottom: 3px solid #0f549e;
     margin-top: 1%;
     font-size: 11pt;
 }
-form fieldset{
+
+form fieldset {
     margin: 0px 2% 1% 2%;
     padding: 1%;
-    border: 1px solid #0f549e; 
+    border: 1px solid #0f549e;
     display: block;
 }
-form legend{
+
+form legend {
     font-weight: bold;
     font-size: 12pt;
 }
-form label{
+
+form label {
     display: inline-block;
     font-size: 11pt;
     height: 24px;
@@ -437,12 +335,13 @@ form label{
     margin: 0px 2px;
     padding: 2px 4px;
 }
-#grpGeral label{
+
+#grpGeral label {
     width: 150px;
     text-align: left;
 }
 
-#grpGeral input{
+#grpGeral input {
     display: inline-block;
     height: 24px;
     vertical-align: middle;
@@ -452,20 +351,24 @@ form label{
     width: calc(100% - 1200px);
     background-color: white;
 }
-#conjuntoField small input{
+
+#conjuntoField small input {
     width: 100px;
 }
-textarea{
+
+textarea {
     height: 100px;
     width: 50%;
     resize: none;
     margin-top: 1%;
     padding: 0px;
 }
-#grpGeral{
+
+#grpGeral {
     width: 100%;
 }
-#grpBotoes{
+
+#grpBotoes {
     text-align: center;
 }
 
