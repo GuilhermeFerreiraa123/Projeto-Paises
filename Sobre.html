@@ -44,28 +44,38 @@
     </header>
 
     <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Sobre o Website</h2>
+
+        
+
+    </div>
+
+
+
+
+    <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2 border-bottom">Membros da Equipa</h2>
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="caixa-info card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-1.jpg'); ">
+            <div id="col-guilherme">
+                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('img/avatar.jfif'); ">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Guilherme Ferreira</h3>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-1.jpg');">
+            <div id="col-miguel">
+                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('img/avatar.jfif');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Miguel Ribeiro</h3>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-1.jpg');">
+            <div id="col-tiago">
+                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('img/avatar.jfif');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Tiago Carmo</h3>
                     </div>
@@ -161,52 +171,57 @@
 
     </form>
     </div>
-    <section id="zonaConteudo">
-        <header>
-            <h2>Ficha Técnica</h2>
-        </header>
-        <form action="#" method="POST" id="formDetalheElemento" class="formFicha">
-            <fieldset id="grpGeral">
-                <legend>Geral</legend>
-                <div class="conjuntoField small">
-                    <label for="campoAno">Primeiro Nome</label>
-                    <input type="text" name="ano" id="campoAno" value="Primeiro Nome">
-                </div>
-                <div class="conjuntoField">
-                    <label for="campoTitle">Último Nome</label>
-                    <input type="text" name="title" id="campoTitle" value="Último Nome">
-                </div>
-                <div class="conjuntoField">
-                    <label for="campoPais">Endereço de e-mail</label>
-                    <input type="text" name="pais" id="campoPais" value="E-mail">
-                </div>
-                <div class="conjuntoField">
-                    <label for="campoDiretor">Número de telefone</label>
-                    <input type="text" name="diretor" id="campoDiretor" value="Número de Telefone">
-                </div>
-                <br>
-                <br>
-                <legend>Descrição</legend>
-                <div class="conjuntoField small">
-                    <label for="campoProblema">Tipo de Problema</label>
-                    <input type="text" name="problema" id="campoProblema" value="">
-                </div>
-                <div class="conjuntoField">
-                    <label for="campoAssunto">Assunto do Problema</label>
-                    <input type="text" name="Assunto" id="campoAssunto" value="">
-                </div>
-                <textarea name="descricao">Esclareça aqui o seu problema de forma específica!</textarea>
-                <div class="conjuntoField">
-                    <label for="campoAnexos">Anexos do Problema</label>
-                    <input type="file" name="Anexos" id="campoAnexos" value="">
-                </div>
-            </fieldset>
-            <fieldset id="grpBotoes">
-                <input type="reset" value="Cancelar">
-                <input type="submit" value="Guardar">
-            </fieldset>
-        </form>
-    </section>
+
+
+    <div class="container px-4 py-5" id="custom-cards">
+
+        <h2 class="pb-2 border-bottom">Formulário Técnico</h2>
+
+        <section id="zonaConteudo">
+            <form action="#" method="POST" id="formDetalheElemento" class="formFicha">
+                <fieldset id="grpGeral">
+                    <legend>Geral</legend>
+                    <div class="conjuntoField small">
+                        <label for="campoAno">Primeiro Nome</label>
+                        <input type="text" name="ano" id="campoAno" value="Primeiro Nome">
+                    </div>
+                    <div class="conjuntoField">
+                        <label for="campoTitle">Último Nome</label>
+                        <input type="text" name="title" id="campoTitle" value="Último Nome">
+                    </div>
+                    <div class="conjuntoField">
+                        <label for="campoPais">Endereço de e-mail</label>
+                        <input type="text" name="pais" id="campoPais" value="E-mail">
+                    </div>
+                    <div class="conjuntoField">
+                        <label for="campoDiretor">Número de telefone</label>
+                        <input type="text" name="diretor" id="campoDiretor" value="Número de Telefone">
+                    </div>
+                    <br>
+                    <br>
+                    <legend>Descrição</legend>
+                    <div class="conjuntoField small">
+                        <label for="campoProblema">Tipo de Problema</label>
+                        <input type="text" name="problema" id="campoProblema" value="Indique-nos o tipo do problema">
+                    </div>
+                    <div class="conjuntoField">
+                        <label for="campoAssunto">Assunto do Problema</label>
+                        <input type="text" name="Assunto" id="campoAssunto" value="Indique-nos o assunto do problema">
+                    </div>
+                    <textarea name="descricao">   Esclareça aqui o seu problema de forma específica!</textarea>
+                    <div class="conjuntoField">
+                        <label for="campoAnexos">Anexos do Problema</label>
+                        <input type="file" name="Anexos" id="campoAnexos" value="">
+                    </div>
+                </fieldset>
+                <fieldset id="grpBotoes">
+                    <input class="btn btn-outline-success my-2 my-sm-0" type="reset" value="Cancelar">
+                    <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Guardar">
+                </fieldset>
+            </form>
+        </section>
+
+    </div>
     <div class="container">
         <footer class="py-3 my-4">
             <a class="footer-brand" href="#">

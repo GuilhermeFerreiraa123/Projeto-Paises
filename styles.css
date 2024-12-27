@@ -347,9 +347,23 @@ form label {
     vertical-align: middle;
     margin: 1px 2px;
     padding: 2px 5px;
-    border: 1px solid black;
-    width: calc(100% - 1200px);
+    border: 2px solid #0f549e;
+    width: calc(100% - 900px);
     background-color: white;
+    font-size: 13px;
+}
+#grpGeral input:hover {
+    border: 3px solid #0f549e;
+}
+
+#grpGeral input:focus {
+    border: 2px dashed #0f549e;
+    outline: none;
+}
+
+#grpGeral input::selection {
+    background-color: #0f549e;
+    color: #ffffff;
 }
 
 #conjuntoField small input {
@@ -362,18 +376,35 @@ textarea {
     resize: none;
     margin-top: 1%;
     padding: 0px;
+    border: 2px solid #0f549e;
 }
 
-#grpGeral {
-    width: 100%;
+textarea:hover {
+    border: 3px solid #0f549e;
+}
+
+textarea::selection {
+    background-color: #0f549e;
+    color: #ffffff;
+}
+
+textarea:focus {
+    border: 2px dashed #0f549e ;
+    outline: none;
 }
 
 #grpBotoes {
     text-align: center;
 }
 
+.conjuntoField input{
+    height: 35px !important;
+}
 
-
+.btn-outline-success{
+    --bs-btn-active-bg: #0f549e;
+    --bs-btn-active-border-color: #0f549e;
+}
 
 
 
