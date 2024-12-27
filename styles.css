@@ -302,12 +302,36 @@ footer {
 
 .col-info-membros {
     text-align: center;
-    margin-top: 40% !important;
+    margin-top: 10% !important;
 }
 
 .caixa-info:hover {
     border-radius: 0%;
 }
+
+.info-membros-text-title{
+    text-align: center;
+    font-weight: bold;
+}
+.info-membros-text{
+    text-align: left;
+    margin-top: 5%;
+    font-size: 20px;
+    width: 110%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 form {
     border-bottom: 3px solid #0f549e;
