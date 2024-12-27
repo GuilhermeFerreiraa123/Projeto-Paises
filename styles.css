@@ -300,13 +300,13 @@ footer {
     letter-spacing: -.05rem;
 }
 
-.col-info-membros {
+#title-guilherme, #title-miguel, #title-tiago {
     text-align: center;
-    margin-top: 10% !important;
+    margin-top: 60% !important;
 }
 
 .caixa-info:hover {
-    border-radius: 0%;
+    border: 3px dashed #0f549e;
 }
 
 .info-membros-text-title{

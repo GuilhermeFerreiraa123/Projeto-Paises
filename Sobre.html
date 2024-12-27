@@ -44,9 +44,19 @@
     </header>
 
     <div class="container px-4 py-5" id="custom-cards">
-        <h2 class="pb-2 border-bottom">Sobre o Website</h2>
+        <h2 class="pb-2 border-bottom">Objetivos do Website</h2>
 
-        
+        <div class="row row-cols-1 row-cols-lg-1 align-items-stretch g-4 py-5">
+            <div id="col-guilherme">
+                <div class="caixa-info card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('img/avatar.jfif'); ">
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-display-7 lh-1 fw-bold">Objetivos</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -57,42 +67,33 @@
         <h2 class="pb-2 border-bottom">Membros da Equipa</h2>
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div id="col-guilherme">
-                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            <div id="col-guilherme" onclick="show_guilherme()">
+                <div class="caixa-info card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg"
                     style="background-image: url('img/avatar.jfif'); ">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="info-membros-text-title">Guilherme Ferreira</h3>
-                        <br>
-                        <h4 class="info-membros-text"><b>Estudante no IPL   </b></h4>
-                        <h4 class="info-membros-text"><b>Número do Estudante: </b>2241869</h4>
-                        <h4 class="info-membros-text"><b>Curso do Estudante: </b>TeSP - Programação de Sistemas de Informação</h4>
-                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Guilherme Ferreira</h3>
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <div id="show-info-guilherme">
+                        </div>
+                        <h3 id="title-guilherme" class="pt-5 mt-5 mb- display-7 lh-1 fw-bold">Guilherme Ferreira</h3>
                     </div>
                 </div>
             </div>
-            <div id="col-miguel">
-                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            <div id="col-miguel" onclick="show_miguel()">
+                <div class="caixa-info card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg"
                     style="background-image: url('img/avatar.jfif');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="info-membros-text-title">Miguel Ribeiro</h3>
-                        <br>
-                        <h4 class="info-membros-text"><b>Estudante no IPL   </b></h4>
-                        <h4 class="info-membros-text"><b>Número do Estudante: </b>2241595</h4>
-                        <h4 class="info-membros-text"><b>Curso do Estudante: </b>TeSP - Programação de Sistemas de Informação</h4>
-                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Miguel Ribeiro</h3>
+                        <div id="show-info-miguel">
+                        </div>
+                        <h3 id="title-miguel" class="pt-5 mt-5 mb- display-7 lh-1 fw-bold">Miguel Ribeiro</h3>
                     </div>
                 </div>
             </div>
-            <div id="col-tiago">
-                <div class="caixa-info card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            <div id="col-tiago" onclick="show_tiago()">
+                <div class="caixa-info card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg"
                     style="background-image: url('img/avatar.jfif');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="info-membros-text-title">Tiago Carmo</h3>
-                        <br>
-                        <h4 class="info-membros-text"><b>Estudante no IPL   </b></h4>
-                        <h4 class="info-membros-text"><b>Número do Estudante: </b>2241610</h4>
-                        <h4 class="info-membros-text"><b>Curso do Estudante: </b>TeSP - Programação de Sistemas de Informação</h4>
-                        <h3 class="pt-5 mt-5 mb- display-7 lh-1 fw-bold col-info-membros">Tiago Carmo</h3>
+                        <div id="show-info-tiago">
+                        </div>
+                        <h3 id="title-tiago" class="pt-5 mt-5 mb- display-7 lh-1 fw-bold">Tiago Carmo</h3>
                     </div>
                 </div>
             </div>
@@ -268,6 +269,7 @@
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="script_membro.js"></script>
 </body>
 
