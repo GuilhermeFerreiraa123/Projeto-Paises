@@ -153,7 +153,7 @@ footer {
 }
 
 .box-info {
-    margin-bottom: 10%;
+    margin-top: 4%;
 }
 
 
@@ -350,19 +350,44 @@ footer {
     font-weight: bold;
 }
 
-.info-membros-text {
+.info-membros-text{
     text-align: left;
-    margin-top: 5%;
+    padding-left: 8%;
+    padding-top: 3%;
     font-size: 20px;
-    width: 110%;
+    width: 95%;
 }
 
-.site-info b {
-    color: #0f549e;
+.border-config{
+    padding-bottom: 2%;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2%;
 }
 
-.site-info b:hover {
-    color: #2085f0;
+.topic-boder-config{
+    padding-top: 2%;
+    border-top: 1px solid #dee2e6;
+    width: 95%;
+}
+
+.foto-membros {
+    width: 50%;
+    height: 80%; 
+    display: block; 
+    margin: 10px auto;
+}
+
+.seta-membros{
+    font-size: 20px;
+}
+
+
+.bold-text {
+    color: #0f549e !important;
+}
+
+.bold-text:hover {
+    color: #2085f0 !important;
 }
 
 .slogan {
