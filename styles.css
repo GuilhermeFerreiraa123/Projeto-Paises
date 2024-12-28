@@ -28,7 +28,7 @@ body {
     height: 80px;
 }
 
-.btn{
+.btn {
     border-radius: 0px;
     border-color: #0f549e;
     color: #0f549e;
@@ -139,6 +139,7 @@ footer {
 
 .card-title {
     text-align: center;
+    font-weight: bold;
 }
 
 .card-text-title {
@@ -154,6 +155,22 @@ footer {
 .box-info {
     margin-bottom: 10%;
 }
+
+
+.title-section-paises {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.text-section-paises {
+    font-size: 20px;
+    color: #797c80;
+    text-align: center;
+    margin-left: 28%;
+    margin-right: 28%;
+}
+
 
 .section-info-box {
     background-image: url(img/city-nature.jfif);
@@ -261,36 +278,42 @@ footer {
 }
 
 .carousel-caption {
-   
+
     bottom: 3rem;
     z-index: 10;
 }
+
 .carousel-inner img {
     padding: 10em 1em;
-    width: 50%; 
+    width: 50%;
     object-fit: cover;
-    margin-left: auto; 
-    margin-right: 0; 
+    margin-left: auto;
+    margin-right: 0;
 }
+
 .carousel-caption {
     padding: 10% 2%;
 }
+
 .carousel-caption h1 {
     font-size: 50px;
-   font-weight: 700;
-   color: #000;
-   padding-bottom: 4%;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 4%;
 }
+
 .carousel-item {
     height: 45rem;
     background-color: #ededed;
 
 
 }
+
 .opacity-75 {
-   max-width: 50%;
-   color: #000;
+    max-width: 50%;
+    color: #000;
 }
+
 .featurette-divider {
     margin: 5rem 0;
 }
@@ -300,38 +323,79 @@ footer {
     letter-spacing: -.05rem;
 }
 
-#title-guilherme, #title-miguel, #title-tiago {
+#title-guilherme,
+#title-miguel,
+#title-tiago {
     text-align: center;
     margin-top: 60% !important;
 }
 
 .caixa-info:hover {
-    border: 3px dashed #0f549e;
+    border: 2px solid #0f549e;
 }
 
-.info-membros-text-title{
+.caixa-info {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    border: 1px solid #797c80;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.info-membros-text-title {
     text-align: center;
     font-weight: bold;
 }
-.info-membros-text{
+
+.info-membros-text {
     text-align: left;
     margin-top: 5%;
     font-size: 20px;
     width: 110%;
 }
 
+.site-info b {
+    color: #0f549e;
+}
 
+.site-info b:hover {
+    color: #2085f0;
+}
 
+.slogan {
+    text-align: center;
+}
 
+.pais-hiperliga {
+    text-decoration: none;
+}
 
+.col-12 {
+    padding-bottom: 2%;
+    cursor: pointer;
+    margin-right: 1%;
+    margin-left: 1%;
+}
 
+.card-img-top {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 0% !important;
+    margin: 5% 5%;
+}
 
+.w-100 {
+    height: 100%;
+}
 
-
-
-
-
-
+.homepage-countries{
+    margin-left: 13%;
+}
 
 form {
     border-bottom: 3px solid #0f549e;
@@ -376,6 +440,7 @@ form label {
     background-color: white;
     font-size: 13px;
 }
+
 #grpGeral input:hover {
     border: 3px solid #0f549e;
 }
@@ -413,7 +478,7 @@ textarea::selection {
 }
 
 textarea:focus {
-    border: 2px dashed #0f549e ;
+    border: 2px dashed #0f549e;
     outline: none;
 }
 
@@ -421,11 +486,11 @@ textarea:focus {
     text-align: center;
 }
 
-.conjuntoField input{
+.conjuntoField input {
     height: 35px !important;
 }
 
-.btn-outline-success{
+.btn-outline-success {
     --bs-btn-active-bg: #0f549e;
     --bs-btn-active-border-color: #0f549e;
 }

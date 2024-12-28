@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries World</title>
+    <link rel="icon" type="image/png" href="img/banner-top-site.webp">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    
 
 </head>
 
@@ -47,7 +47,8 @@
 
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
@@ -55,13 +56,15 @@
                 <div class="container d-flex">
                     <div class="carousel-caption text-start">
                         <h1>Descobre Grécia</h1>
-                        <p class="opacity-75">Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova
+                        <p class="opacity-75">Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas
+                            vibrantes de Nova
                             Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.
-                            
-                            Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco</p>
+
+                            Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco
+                        </p>
                         <p><a class="btn my-2 my-sm-0 btn-exp" href="#">Explorar</a></p>
                     </div>
-                    <img src="img/greece.png" alt="Imagem de Destino" >
+                    <img src="img/greece.png" alt="Imagem de Destino">
                 </div>
             </div>
         </div>
@@ -74,7 +77,33 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
+
+    <div class="section-paises">
+        <h1 class="title-section-paises">Escolha o país</h1>
+        <br>
+        <p class="text-section-paises">Escolha um destino para explorar a sua singularidade, cultura e atrações.
+            Descubra os lugares
+            mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.
+        </p>
+        <div class="lista-paises homepage-countries">
+            <div class="container mt-5 card-paises">
+                <div id="countries-list" class="row"></div>
+                <template id="country-card-template">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm w-100 card-info-paises">
+                            <img src="" class="card-img-top img-fluid rounded" alt="">
+                            <h5 class="card-title"></h5>
+                            <h5 class="card-body"></h5>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div id="Erro-Message">
+        <p class="erro-text"><b>País não encontrado</b></p>
+    </div><br>
+    </div>
 
 
     <div class="section-info-box">
@@ -102,13 +131,14 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
-                        <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                        <img class="foto-perfil" src="img/guilherme-foto.jpg" alt="">
                         <div class="card-body">
                             <p class="card-text-title">Guilherme Ferreira</p>
                             <p class="card-text-subtitle">Estudante</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a class="btn  my-2 my-sm-0 info-buttons" href="Sobre.html #col-guilherme">Mais Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
+                                    <a class="btn  my-2 my-sm-0 info-buttons" href="Sobre.html #col-guilherme">Mais
+                                        Informações<i class="bi bi-arrow-right-short icon-arrow"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +147,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
-                        <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                        <img class="foto-perfil" src="img/miguel-foto.jpg" alt="">
                         <div class="card-body">
                             <p class="card-text-title">Miguel Ribeiro</p>
                             <p class="card-text-subtitle">Estudante</p>
@@ -133,7 +163,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="70%" height="20"></svg>
-                        <img class="foto-perfil" src="img/avatar.jfif" alt="">
+                        <img class="foto-perfil" src="img/tiago-foto.jpg" alt="">
                         <div class="card-body">
                             <p class="card-text-title">Tiago Carmo</p>
                             <p class="card-text-subtitle">Estudante</p>
@@ -178,7 +208,8 @@
                 </footer>
             </div>
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script type="text/javascript" src="script-paises-homepage.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
