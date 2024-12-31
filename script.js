@@ -1,6 +1,7 @@
 var cloneOriginalCard = $('#country-card-template').html();
 var erro_message = document.getElementById('Erro-Message');
 var card_info = document.getElementsByClassName('card-info-paises');
+var arrayfavoritos;
 
 $(document).ready(function () {
   carregarTodosPaises();
@@ -8,9 +9,6 @@ $(document).ready(function () {
 
 function carregarTodosPaises() {
   $('#countries-list').html('');
-
-  
-
   $.ajax({
     method: 'GET',
     url: 'https://restcountries.com/v3.1/all'
@@ -43,6 +41,13 @@ $('#btn-search').on('click', function () {
 });
 
 function exibirPaises(paises) {
+
+  if (localStorage.getItem("pais") === null) {
+    arrayfavoritos = [];
+  } else {
+    arrayfavoritos = JSON.parse(localStorage.getItem("pais"));
+  }
+
   for (var i = 0; i < paises.length; i++) {
     var pais = paises[i];
     var cloneCard = $(cloneOriginalCard);
@@ -50,6 +55,7 @@ function exibirPaises(paises) {
     $('.card-title', cloneCard).text(pais.name.common);
     $('.card-img-top', cloneCard).attr("src", pais.flags.png);
     $('.card-body', cloneCard).append('<p>Continente: ' + pais.region + '</p>');
+    var estrelaicon = $('#estrela', cloneCard).attr("class", "bi bi-star icon-favorites btn-favoritos");
     erro_message.style.display = 'none';
 
     var objectPais = {
@@ -60,23 +66,59 @@ function exibirPaises(paises) {
     };
 
     var stringObjectPais = JSON.stringify(objectPais);
-    cloneCard.find('.btn-favoritos').attr("onclick", "addfavoritos(" + stringObjectPais + ")");
+    $('.btn-favoritos', cloneCard).attr("onclick", "addfavoritos(" + stringObjectPais + ", this)");
+
+    ispaisfavoritos(pais, estrelaicon);
 
     $('#countries-list').append(cloneCard);
   }
 }
 
-function addfavoritos(pais) {
-  var arrayfavoritos;
-  
+function addfavoritos(pais, iconestrelaElement) {
+  var existe = false;
+
   if (localStorage.getItem("pais") === null) {
     arrayfavoritos = [];
   } else {
     arrayfavoritos = JSON.parse(localStorage.getItem("pais"));
   }
 
-  arrayfavoritos.push(pais);
 
-  var favoritosstorage = JSON.stringify(arrayfavoritos);
-  localStorage.setItem("pais", favoritosstorage);
+  for (let i = 0; i < arrayfavoritos.length; i++) {
+    if (arrayfavoritos[i].nome === pais.nome) {
+      arrayfavoritos.splice(i, 1);
+      existe = true;
+      $(iconestrelaElement).attr("class", "bi bi-star icon-favorites");
+    }
+  }
+
+  if (!existe) {
+    arrayfavoritos.push(pais);
+    $(iconestrelaElement).attr("class", "bi bi-star-fill icon-favorites");
+  }
+
+  localStorage.setItem("pais", JSON.stringify(arrayfavoritos));
+
+}
+
+
+function ispaisfavoritos(pais, estrelaElement) {
+
+  var encontrado = false;
+
+  if (localStorage.getItem("pais") === null) {
+    return;
+  }
+
+
+  for (let i = 0; i < arrayfavoritos.length; i++) {
+    if (arrayfavoritos[i].nome === pais.name.common) {
+      $(estrelaElement).attr("class", "bi bi-star-fill icon-favorites");
+      encontrado = true;
+    }
+  }
+
+  if (!encontrado) {
+    $(estrelaElement).attr("class", "bi bi-star icon-favorites");
+  }
 }

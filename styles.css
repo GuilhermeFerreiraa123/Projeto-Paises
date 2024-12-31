@@ -76,15 +76,14 @@ body {
     color: white;
 }
 
-.link-body-emphasis {
-    margin-top: 3%;
-    margin-right: 3%;
-    text-align: right;
-}
+
 
 .icon-favorites {
     color: gold;
     font-size: 120%;
+    margin-top: 3%;
+    margin-right: 3%;
+    text-align: right;
 }
 
 footer {
@@ -398,13 +397,23 @@ footer {
     text-decoration: none;
 }
 
-.col-12 {
-    padding-bottom: 2%;
-    cursor: pointer;
-    margin-right: 1%;
-    margin-left: 1%;
+.lista-paises {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.card-paises {
+    margin-top: 2%;
+}
+
+.card-info-paises {
+    margin-bottom: 5%; 
+}
+
+.col-12 {
+    margin-bottom:3%; 
+}
 .card-img-top {
     width: 90%;
     height: 90%;
