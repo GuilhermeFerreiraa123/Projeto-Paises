@@ -27,10 +27,10 @@
             <a class="nav-link" href="homepage.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Paisespage.html"><b>Países</b></a>
+            <a class="nav-link active" href="Paisespage.html"><b>Países</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Loja</a>
+            <a class="nav-link" href="Favoritospage.html">Favoritos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Sobre.html">Sobre</a>
@@ -43,62 +43,60 @@
     </div>
   </header>
   <br>
-  <div class="filters-box-sections">
-    <div>
-      <b>FILTROS</b><br>
-
-      <div class="filters-row col-7">
-        <div class="filters-box col-4">
-          <span id="numeropaises">Países: </span>
-          <p>Região</p>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="Africa">
-            <label class="form-check-label" for="inlineRadio1">África 🌏</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2"
-              value="Americas">
-            <label class="form-check-label" for="inlineRadio2">América 🌏</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="Asia">
-            <label class="form-check-label" for="inlineRadio3">Ásia 🌏</label>
-          </div><br>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="Europe">
-            <label class="form-check-label" for="inlineRadio4">Europa🌏</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="Oceania">
-            <label class="form-check-label" for="inlineRadio5">Oceania 🌏</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6"
-              value="Antarctic">
-            <label class="form-check-label" for="inlineRadio6">Antártida 🌏</label>
-          </div>
-        </div>
-        <div class="filters-box col-4">
-          <p>Dados</p>
-          <div class="slidecontainer">
-            <input type="range" min="1" max="1500000000" class="slider" id="myRange">
-            <div class="container-center">
-              <input type="text" id="value_bar_people" class="form-control" placeholder="População"
-                aria-label="População" aria-describedby="basic-addon1">
-            </div>
-
-          </div>
-        </div>
-        <input id="titulo" type="text" class="form-control" placeholder="Pesquisa" name="nome">
-        <button id="btn-search" type="submit" class="btn btn-secondary">Search</button>
-
-      </div>
-    </div>
-  </div>
-
 
   <div class="lista-paises">
-    <div class="container mt-5 card-paises">
+    <div class="col-3 filters-box-sections">
+      <div>
+        <br>
+        <div class="title-container">
+          <b class="title-filters">Filtros</b>
+          <a class="favorite-filter-link bi bi-star-fill btn-favoritos" href="Favoritospage.html"></a>
+        </div>
+        <div class="search-container">
+          <input id="titulo" type="text" class="filter-search-box" placeholder="Pesquisa" name="nome"><a id="btn-search"
+            type="submit" class="bi bi-search"></a>
+        </div>
+        <div class="filters-container">
+          <br>
+          <p class="subtitle-filters">Região</p>
+          <div class="filters-box">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="Africa">
+              <label class="form-check-label" for="inlineRadio1">África 🌏</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2"
+                value="Americas">
+              <label class="form-check-label" for="inlineRadio2">América 🌏</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="Asia">
+              <label class="form-check-label" for="inlineRadio3">Ásia 🌏</label>
+            </div><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="Europe">
+              <label class="form-check-label" for="inlineRadio4">Europa🌏</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="Oceania">
+              <label class="form-check-label" for="inlineRadio5">Oceania 🌏</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6"
+                value="Antarctic">
+              <label class="form-check-label" for="inlineRadio6">Antártida 🌏</label>
+            </div>
+          </div>
+        </div>
+        <div class="filters-container">
+          <p class="subtitle-filters">População</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="1500000000" class="slider" id="myRange">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 container card-paises">
       <div id="countries-list" class="row box-card-countries"></div>
       <template id="country-card-template">
         <div class="col-12 col-sm-10 col-md-3 d-flex justify-content-center">
@@ -110,11 +108,12 @@
           </div>
         </div>
       </template>
+      <div id="Erro-Message">
+        <p class="erro-text"><b>País não encontrado</b></p>
+      </div>
     </div>
   </div>
-  <div id="Erro-Message">
-    <p class="erro-text"><b>País não encontrado</b></p>
-  </div>
+
 
   <div class="container">
     <footer class="py-3 my-4">
