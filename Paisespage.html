@@ -44,6 +44,8 @@
   </header>
   <br>
 
+
+
   <div class="lista-paises">
     <div class="col-3 filters-box-sections">
       <div>
@@ -53,39 +55,38 @@
           <a class="favorite-filter-link bi bi-star-fill btn-favoritos" href="Favoritospage.html"></a>
         </div>
         <div class="search-container">
-          <input id="titulo" type="text" class="filter-search-box" placeholder="Pesquisa" name="nome"><a id="btn-search"
-            type="submit" class="bi bi-search"></a>
+          <input id="titulo" type="text" class="filter-search-box" placeholder="Pesquisa" name="nome"><a id="btn-search" type="submit" class="bi bi-search"></a>
         </div>
         <div class="filters-container">
           <br>
           <p class="subtitle-filters">Região</p>
           <div class="filters-box">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="Africa">
-              <label class="form-check-label" for="inlineRadio1">África 🌏</label>
+              <input class="form-check-input" type="radio" name="countriesoptions" id="africabox" value="Africa">
+              <label class="form-check-label" for="africabox">África 🌏</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2"
-                value="Americas">
-              <label class="form-check-label" for="inlineRadio2">América 🌏</label>
+              <input class="form-check-input" type="radio" name="countriesoptions" id="americabox" value="Americas">
+              <label class="form-check-label" for="americabox">América 🌏</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="Asia">
-              <label class="form-check-label" for="inlineRadio3">Ásia 🌏</label>
+              <input class="form-check-input" type="radio" name="countriesoptions" id="asiabox" value="Asia">
+              <label class="form-check-label" for="asiabox">Ásia 🌏</label>
             </div><br>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="Europe">
-              <label class="form-check-label" for="inlineRadio4">Europa🌏</label>
+              <input id="europebox" class="form-check-input" type="radio" name="countriesoptions" value="Europe">
+              <label class="form-check-label" for="europebox">Europa🌏</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="Oceania">
-              <label class="form-check-label" for="inlineRadio5">Oceania 🌏</label>
+              <input class="form-check-input" type="radio" name="countriesoptions" id="oceaniabox" value="Oceania">
+              <label class="form-check-label" for="oceaniabox">Oceania 🌏</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6"
-                value="Antarctic">
-              <label class="form-check-label" for="inlineRadio6">Antártida 🌏</label>
+              <input class="form-check-input" type="radio" name="countriesoptions" id="antarcticbox" value="Antarctic">
+              <label class="form-check-label" for="antarcticbox">Antártida 🌏</label>
             </div>
+            <br>
+            <button id="btn-search" type="submit" class="btn" onclick="submitfilter()"></button>
           </div>
         </div>
         <div class="filters-container">
