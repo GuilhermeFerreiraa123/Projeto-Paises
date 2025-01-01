@@ -255,6 +255,7 @@ footer {
 #Erro-Message {
     text-align: center;
     color: red;
+    margin-top: 14%;
 }
 
 .carousel {
@@ -398,6 +399,7 @@ footer {
 
 .filters-box-sections {
     margin-left: 1%;
+    height: 30%;
 }
 
 .card-paises,
