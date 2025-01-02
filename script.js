@@ -22,25 +22,8 @@ function carregarTodosPaises() {
   });
 }
 
-$('#btn-search').on('click', function () {
-  var pesquisa = $('#titulo').val().trim();
 
-  if (pesquisa === '') {
-    carregarTodosPaises();
-    return;
-  }
 
-  $('#countries-list').html('');
-
-  $.ajax({
-    method: 'GET',
-    url: 'https://restcountries.com/v3.1/name/' + pesquisa
-  }).done(function (dados) {
-    exibirPaises(dados);
-  }).fail(function () {
-    erro_message.style.display = 'block';
-  });
-});
 
 function exibirPaises(paises) {
 
@@ -125,7 +108,7 @@ function ispaisfavoritos(pais, estrelaElement) {
 }
 
 
-/*function submitfilter() {
+function submitfilter() {
   for (const radio of radios) {
     if (radio.checked) {
       selectedValue = radio.value;
@@ -133,5 +116,43 @@ function ispaisfavoritos(pais, estrelaElement) {
     }
   }
 
-  console.log('Valor selecionado:', selectedValue);
-}*/
+  var pesquisa = $('#titulo').val().trim();
+
+  $('#countries-list').html('');
+
+  let url = 'https://restcountries.com/v3.1/all';
+
+
+  if (selectedValue && pesquisa) {
+
+    url = `https://restcountries.com/v3.1/region/${selectedValue}`;
+  } else if (selectedValue) {
+
+    url = `https://restcountries.com/v3.1/region/${selectedValue}`;
+  } else if (pesquisa) {
+
+    url = `https://restcountries.com/v3.1/name/${pesquisa}`;
+  }
+
+  $.ajax({
+    method: 'GET',
+    url: url,
+  })
+    .done(function (dados) {
+      let paisesFiltrados = dados;
+
+
+      if (selectedValue && pesquisa) {
+        paisesFiltrados = paisesFiltrados.filter((pais) =>
+          pais.name.common.toLowerCase().includes(pesquisa.toLowerCase())
+        );
+      }
+
+      exibirPaises(paisesFiltrados);
+    })
+    .fail(function () {
+      alert('Erro ao buscar informações dos países.');
+    });
+}
+
+
