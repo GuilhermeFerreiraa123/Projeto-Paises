@@ -15,34 +15,92 @@
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.html">
-                <img src="img/logo.png" alt="Logo" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homepage.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Paisespage.html">Países</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Favoritospage.html"><b>Favoritos</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-success my-2 my-sm-0" href="Sobre.html #membros">Contactos</a>
-                    </li>
-                </ul>
+          <a class="navbar-brand" href="homepage.html">
+            <img src="img/logo.png" alt="Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Paisespage.html">Países</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Loja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Favoritospage.html"><b>Favoritos</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="Sobre.html">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="favorites-page">
+        <h1 class="title-section-paises">Favoritos</h1>
+        <br>
+        <p class="text-section-favorites">Nesta página pode encontrar todos os países dos quais gostou e decidiu adicionar aos favoritos, na página dos países.
+            Este mecanismo permite ajudá-lo a priorizar países dos quais tem curisidade.
+
+        </p>
+        <div class="lista-paises-favoritos">
+            <div class="container mt-5">
+                <div id="countries-list-favoritos" class="row"></div>
+                <template id="country-card-favoritos-template">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm w-100 card-info-favoritos-paises">
+                            <a id="estrela" class="link-body-emphasis btn-favoritos" onclick="addfavoritos()"></a>
+                            <img src="" class="card-favoritos-img-top img-fluid rounded" alt="">
+                            <h5 class="card-favoritos-title"></h5>
+                            <h5 class="card-favoritos-body"></h5>
+                            <div class="btn-detalhes">
+                                <a class="btn my-2 my-sm-0 info-buttons-favorites" href="Sobre.html #seta-tiago">Detalhes<i class="bi bi-arrow-right-short icon-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
-    </header>
+    </div>
+      <div class="container">
+        <footer class="py-3 my-4">
+            <a class="footer-brand" href="#">
+                <img src="img/logo.png" alt="Logo" height="60">
+            </a>
+            <ul class="nav justify-content-center pb-1">
+                <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+                <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
+
+            </ul>
+            <ul class="nav justify-content-center pb-3 mb-3 border-under">
+                <li class="ms-3">
+                    <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a></div>
+                </li>
+                <li class="ms-3">
+                    <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a></div>
+                </li>
+                <li class="ms-3">
+                    <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a></div>
+                </li>
+                <li class="ms-3">
+                    <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a></div>
+                </li>
+            </ul>
+            <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

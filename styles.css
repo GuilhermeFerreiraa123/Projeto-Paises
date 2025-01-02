@@ -36,8 +36,6 @@ body {
     padding: 10px 20px;
 }
 
-
-
 .btn-outline-success:hover {
     background-color: #0f549e;
     color: #fff;
@@ -91,7 +89,17 @@ footer {
     background-color: #f3f1f1;
 }
 
+.circulo-effect{
+    border-radius: 100%; 
+    border: 2px solid #0f549e; 
+    padding-left: 6px; 
+    padding-right: 6px;
+}
 
+.circulo-effect:hover{
+    background-color: #0f549e;
+    border: 2px solid #0f549e; 
+}
 
 .album {
     background-color: white;
@@ -113,7 +121,7 @@ footer {
     font-size: 20px;
 }
 
-.btn-group {
+.btn-group{
     margin-left: 24%;
 }
 
@@ -130,17 +138,18 @@ footer {
     border-color: #0f549e;
 }
 
-.card-body {
+.card-body, .card-favoritos-body{
     padding-top: 0%;
     border-radius: 0%;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
 }
 
-.card-title {
+.card-title, .card-favoritos-title{
     text-align: center;
     font-weight: bold;
 }
 
-.card-text-title {
+.card-text-title{
     font-size: 120%;
     margin-bottom: 1%;
 }
@@ -269,11 +278,15 @@ footer {
 }
 
 .carousel-inner img {
-    padding: 10em 1em;
+    padding: 5em 1em;
     width: 50%;
+    padding-left: 11%;
     object-fit: cover;
     margin-left: auto;
     margin-right: 0;
+}
+.carousel-inner{
+    padding-bottom: 4%;
 }
 
 .carousel-caption {
@@ -434,7 +447,7 @@ footer {
 
 .search-container {
     margin-top: 5%;
-    margin-left: 9%;
+    margin-left: 14%;
     display: flex;
     align-items: center;
     width: 100%;
@@ -516,7 +529,7 @@ footer {
     outline: none;
 }
 
-.card-info-paises {
+.card-info-paises, .card-info-favoritos-paises {
     margin-top: 4%;
     margin-bottom: 5%;
 }
@@ -525,7 +538,7 @@ footer {
     margin-bottom: 3%;
 }
 
-.card-img-top {
+.card-img-top, .card-favoritos-img-top {
     width: 90%;
     height: 90%;
     object-fit: cover;
@@ -640,12 +653,21 @@ textarea:focus {
     --bs-btn-active-border-color: #0f549e;
 }
 
+.favorites-page{
+    margin-top: 3%;
+}
 
+.text-section-favorites {
+    font-size: 20px;
+    color: #797c80;
+    text-align: center;
+    margin-left: 13%;
+    margin-right: 13%;
+}
 
-
-
-
-
+.btn-detalhes{
+    margin-left: 28%;
+}
 
 
 

@@ -1,13 +1,15 @@
 var cloneOriginalCard = $('#country-card-template').html();
+var cloneFavoritosCard = $('#country-card-favoritos-template').html();
 var erro_message = document.getElementById('Erro-Message');
-var card_info = document.getElementsByClassName('card-info-paises');
 var checkbox_europe = document.getElementById('europebox');
 const radios = document.getElementsByName('countriesoptions');
 var selectedValue = null;
 var arrayfavoritos;
 
+
 $(document).ready(function () {
   carregarTodosPaises();
+  exibirFavoritosPaises(arrayfavoritos);
 });
 
 function carregarTodosPaises() {
@@ -22,9 +24,6 @@ function carregarTodosPaises() {
   });
 }
 
-
-
-
 function exibirPaises(paises) {
 
   if (localStorage.getItem("pais") === null) {
@@ -36,7 +35,6 @@ function exibirPaises(paises) {
   for (var i = 0; i < paises.length; i++) {
     var pais = paises[i];
     var cloneCard = $(cloneOriginalCard);
-    console.log(checkbox_europe.value);
     $('.card-title', cloneCard).text(pais.name.common);
     $('.card-img-top', cloneCard).attr("src", pais.flags.png);
     $('.card-body', cloneCard).append('<p>Continente: ' + pais.region + '</p>');
@@ -57,6 +55,35 @@ function exibirPaises(paises) {
     $('#countries-list').append(cloneCard);
   }
 }
+
+function exibirFavoritosPaises(arrayfavoritos) {
+  if (localStorage.getItem("pais") === null) {
+    arrayfavoritos = [];
+  } else {
+    arrayfavoritos = JSON.parse(localStorage.getItem("pais"));
+  }
+
+  // Certifique-se de usar o contêiner correto
+  $('#countries-list-favoritos').html('');
+
+  for (var i = 0; i < arrayfavoritos.length; i++) {
+    var paisFavorito = arrayfavoritos[i];
+    var cloneCard = $($('#country-card-favoritos-template').html());
+    $('.card-favoritos-title', cloneCard).text(paisFavorito.nome); // Use 'nome'
+    $('.card-favoritos-img-top', cloneCard).attr('src', paisFavorito.bandeira); // Use 'bandeira'
+    $('.card-favoritos-body', cloneCard).html('<p>Continente: ' + paisFavorito.continente + '</p>');
+    var estrelaicon = $('#estrela', cloneCard).attr("class", "bi bi-star-fill icon-favorites btn-favoritos");
+    
+    var stringObjectPais = JSON.stringify(paisFavorito);
+    $('.btn-favoritos', cloneCard).attr("onclick", "addfavoritos(" + stringObjectPais + ", this)");
+
+    
+    $('#countries-list-favoritos').append(cloneCard);
+  }
+}
+
+
+
 
 function addfavoritos(pais, iconestrelaElement) {
   var existe = false;

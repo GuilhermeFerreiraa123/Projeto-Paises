@@ -14,34 +14,34 @@
 <body>
   <header class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="homepage.html">
-        <img src="img/logo.png" alt="Logo" height="40">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="homepage.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Paisespage.html"><b>Países</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Favoritospage.html">Favoritos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Sobre.html">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="Sobre.html #membros">Contactos</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="homepage.html">
+            <img src="img/logo.png" alt="Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Paisespage.html"><b>Países</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Favoritospage.html">Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="Sobre.html"><b>Contactos</b></a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </header>
+</header>
   <br>
 
 
@@ -55,7 +55,7 @@
           <a class="favorite-filter-link bi bi-star-fill btn-favoritos" href="Favoritospage.html"></a>
         </div>
         <div class="search-container">
-          <input id="titulo" type="text" class="filter-search-box" placeholder="Pesquisa" name="nome"><a id="btn-search" type="submit" class="bi bi-search"></a>
+          <input id="titulo" type="text" class="filter-search-box" placeholder="Pesquisa" name="nome">
         </div>
         <div class="filters-container">
           <br>
@@ -86,13 +86,10 @@
               <label class="form-check-label" for="antarcticbox">Antártida 🌏</label>
             </div>
             <br>
-            <button id="btn-search" type="submit" class="btn" onclick="submitfilter()"></button>
-          </div>
-        </div>
-        <div class="filters-container">
-          <p class="subtitle-filters">População</p>
-          <div class="slidecontainer">
-            <input type="range" min="1" max="1500000000" class="slider" id="myRange">
+            <br>
+            <div class="btn-detalhes">
+              <a id="btn-search" type="submit" class="btn my-2 my-sm-0 info-buttons-favorites" onclick="submitfilter()">Pesquisar<i class="bi bi-search"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -118,34 +115,33 @@
 
   <div class="container">
     <footer class="py-3 my-4">
-      <a class="footer-brand" href="#">
-        <img src="img/logo.png" alt="Logo" height="60">
-      </a>
-      <ul class="nav justify-content-center pb-1">
-        <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
-        <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
+        <a class="footer-brand" href="#">
+            <img src="img/logo.png" alt="Logo" height="60">
+        </a>
+        <ul class="nav justify-content-center pb-1">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Países</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Loja</a></li>
+            <li class="nav-item"><a href="Sobre.html" class="nav-link px-2">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Contactos</a></li>
 
-      </ul>
-      <ul class="nav justify-content-center pb-3 mb-3 border-under">
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a>
-        </li>
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a>
-        </li>
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a>
-        </li>
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a>
-        </li>
-      </ul>
-      <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
+        </ul>
+        <ul class="nav justify-content-center pb-3 mb-3 border-under">
+            <li class="ms-3">
+                <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-linkedin icon"></i></a></div>
+            </li>
+            <li class="ms-3">
+                <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-facebook icon"></i></a></div>
+            </li>
+            <li class="ms-3">
+                <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram icon"></i></a></div>
+            </li>
+            <li class="ms-3">
+                <div class="circulo-effect"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter-x icon"></i></a></div>
+            </li>
+        </ul>
+        <p class="text-center">&copy; 2024 Direitos de Autor, Todos os direitos reservados</p>
     </footer>
-  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 
