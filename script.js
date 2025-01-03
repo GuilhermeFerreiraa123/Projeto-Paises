@@ -25,7 +25,6 @@ function carregarTodosPaises() {
 }
 
 function exibirPaises(paises) {
-
   if (localStorage.getItem("pais") === null) {
     arrayfavoritos = [];
   } else {
@@ -39,8 +38,7 @@ function exibirPaises(paises) {
     $('.card-img-top', cloneCard).attr("src", pais.flags.png);
     $('.card-body', cloneCard).append('<p>Continente: ' + pais.region + '</p>');
     var estrelaicon = $('#estrela', cloneCard).attr("class", "bi bi-star icon-favorites btn-favoritos");
-    erro_message.style.display = 'none';
-
+   
     var objectPais = {
       "nome": pais.name.common,
       "populacao": pais.population,
@@ -50,11 +48,13 @@ function exibirPaises(paises) {
 
     var stringObjectPais = JSON.stringify(objectPais);
     $('.btn-favoritos', cloneCard).attr("onclick", "addfavoritos(" + stringObjectPais + ", this)");
+    $('#btn-detalhes', cloneCard).attr("onclick", "exibirDetalhesPaises(" + i + ", " + paises +")");
 
     ispaisfavoritos(pais, estrelaicon);
     $('#countries-list').append(cloneCard);
   }
 }
+
 
 function exibirFavoritosPaises(arrayfavoritos) {
   if (localStorage.getItem("pais") === null) {
@@ -73,11 +73,11 @@ function exibirFavoritosPaises(arrayfavoritos) {
     $('.card-favoritos-img-top', cloneCard).attr('src', paisFavorito.bandeira); // Use 'bandeira'
     $('.card-favoritos-body', cloneCard).html('<p>Continente: ' + paisFavorito.continente + '</p>');
     var estrelaicon = $('#estrela', cloneCard).attr("class", "bi bi-star-fill icon-favorites btn-favoritos");
-    
+
     var stringObjectPais = JSON.stringify(paisFavorito);
     $('.btn-favoritos', cloneCard).attr("onclick", "addfavoritos(" + stringObjectPais + ", this)");
 
-    
+
     $('#countries-list-favoritos').append(cloneCard);
   }
 }
@@ -182,4 +182,21 @@ function submitfilter() {
     });
 }
 
+/*                                       DETALHES DOS PAISES                                    */
 
+function exibirDetalhesPaises(indice, paises) {
+  
+  console.log(indice);
+  if (localStorage.getItem("pais") === null) {
+    arrayfavoritos = [];
+  } else {
+    arrayfavoritos = JSON.parse(localStorage.getItem("pais"));
+  }
+  var pais = paises[indice];
+
+  $('.nomedopais', cloneCard).text(pais.nome);
+
+  
+
+  nomedopais
+}
